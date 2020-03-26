@@ -32,11 +32,18 @@ public class Zbior {
      }
 
      //set dane zwiazane z wypozyczeniem
+   public void setMaxCzasWypozyczenia(int czas) {
+        if(czas>0)MaxCzasWypozyczenia = czas;
+        else System.out.println("Bledna wartosc");
+    }
+
     public void setOplataZaOpoznienie(double oplataZl) {
-        OplataZa1Dzien = oplataZl;
+        if(oplataZl>=0)OplataZa1Dzien = oplataZl;
+        else System.out.println("Bledna wartosc");
     }
     public void setCzasWypozyczenia(int czasWypozyczenia) {
-        CzasWypozyczenia = czasWypozyczenia;
+        if(czasWypozyczenia>=0)CzasWypozyczenia = czasWypozyczenia;
+        else System.out.println("Bledna wartosc");
     }
 
    //get
