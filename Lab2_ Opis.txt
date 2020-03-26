@@ -1,0 +1,32 @@
+Wypożyczalnia składa się z 8 klas. Główne klasy to Lab_02 - czyli wykonuja metodę main, Użytkownik i Zbiór.
+Pozostałe (Film, Książka, Audiobook, Muzyka) wprost dziedziczą po Zbiorze, wyjątek stanowi klasa Ebook,
+która dziedziczy po Książce ( gdyż ebook to ksiażka elektroniczna i zbyt dużo zmiennych dublowała z klasy Książka).
+Klasy dziedziczące zawierają tylko konstruktory i metody set oraz get, przy czym z uwagi na niewykorzystanie wszystkich wariantów set/ get oraz bardziej rozbudowanych konstruktorów część z nich nie jest zaimplementowana (ze względu na zbyt dużą stratę czasu).Również klasa Użytkownik jako dane posiada tylko imie i nazwisko użytkownika, nie zaś jego wiek, rok wpisania do wypożyczalni, itp.
+Dla wygody zrobiono w main listy użytkowników i zasobów.
+
+Funkcjonalności:
+-Dodanie nowego zasobu/ uzytkownika - za pomocą konstruktorów i słowa kluczowego add (ponieważ dodajemy do listy). Przy użytkowniku wymagane jest podanie imienia i nazwiska, przy zbiorach można (ale nie trzeba) wszytskie informacje dopisać później ( ze względu na szybkość sprawdzania przy niektórych klasach ustwiono też konstruktor, któremu należy podać tylko nazwę i autora).
+
+Ważne metody w klasie Użytkownik:
+-Wyświetlenie historii - historia zapisywana jest jako lista stringów zawierających nazwę i autora wypożyczonej pozycji
+-Dopisanie pozycji do historii 
+-Wywołanie i usunięcie oraz zobaczenie blokady użytkownika (set/get)
+
+
+Ważne metody w klasie Zbiór:
+-Określenie opłat za oddanie zbioru poza terminem i maksymalnego czasu wypożyczenia ( poprzez set ).
+-Metoda PoTerminie zwracająca id użytkownika, gdy ten przetrzymał daną pozycję, jeśli nie zwraca -1. Pomocne przy ustawieniu blokady.
+-Wypożyczenie danego obiektu ze zbioru. (Wytłumaczona w komentarzu w programie):
+"   /* Metoda Wypozyczenie przypisuje id uzytkownika do danego zasobu oraz zapamietuje date wypozyczenia, sprawdza czy uzytkownik posiada cos po terminie (sprawdzenie blokady) i jesli nie, zapisuje nazwe i autora obiektu w   historii uzytkownika, sprawdza tez czy pozycja zostala juz wypozyczona
+         */
+"
+-Zwrócenie obiektu.(Wytłumaczona w komentarzu w programie)
+"* Metoda Zwrot zwraca id aktualnego posiadacza obiektu (tu ksiazki), jesli takiego nie ma zwraca -1, kasuje jego dane (id) z danych tego obiektu, ustawia tez czas wypozyczenia na 0 (bo obiekt jest w wypozyczalni) i oblicza kwote zaplaty w przypadku przetrzymania zbioru. Program nie przewiduje, że ksiazke(zbiór) mozna zwrocic bez jej jednoczesnego opalcenia w przypadku nie dotrzymania terminu. Cała "akcja" zwrocenia przewiduje wywolanie 2 metod - Zwrotu na zasobach i usuniecia blokady na uzytkowniku
+        */
+"
+
+
+Co mogłoby być w programie, a czego nie ma?
+-Pętla w main()/dodatkowe metody, która/-e przy wypożyczniu nakładają na użytkownika blokadę,
+ gdyż gdy użytkownik zwróci chociaż jedną z kilku pozycji po terminie, blokada i tak zostaje zdjęta.
+-Nie ma dołączonej klasy Scanner ( dlatego też metody nie mają zabezpieczenia przed wpisywaniem niekonwencjonalnych ciągów znaków do systemu)
