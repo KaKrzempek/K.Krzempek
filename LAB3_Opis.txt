@@ -1,0 +1,23 @@
+Program zawiera interfejs Sortable, z którego korzystają 2 klasy: Kubelki (sortowanie kubełkowe) i Babelki (sortowanie bąbelkowe).
+
+Main:
+Na początku automatycznie tworzona jest tablica 200 liczb w losowej kolejności.
+Użytkownik może potem wybrać jedną z pięciu dostępnych opcji (tj. wybór sortowania, pokaż/stwórz tablicę lub wyjdź z programu).
+Program bierze pod uwagę tylko pierwszy znak wpisany przez użytkownika, po wciśnięciu przycisku należy zatwierdzić go Enterem.
+Jeśli Użytkownik zdecyduje się na sortowanie zostanie utworzony obiekt danej klasy sortowania i wywołane odpowiednie metody.
+
+Sortowanie bąbelkowe: 
+Metoda zawiera dwie pętle, w wewntrznej porównuje dwie sąsiednie liczby i, jeśli zajdzie taka potrzeba, zmienia ich kolejność w tablicy z pomocą zmiennej temp.
+Dzięki temu największa liczba z tablicy będzie przemieszczała się na koniec zbioru. Zewnętrzna pętla zapewnia następną serię porównań dla zbioru.
+Porównania powtarzane są na zbiorze pomniejszonym o już ułożone elementy.
+
+Sortowanie kubełkowe:
+Metoda wybiera środkowy element w tablicy, który bedzie "punktem odniesienia" ( tutaj pivot).
+Następnie porównuje każdą liczbę do pivot, jeśli po stronie lewej jest mniejsza liczba od pivot, przechodzi dalej,
+tak samo ze stroną prawą (tylko, że tu zostawia większe liczby). Jelśli okaże się, ze liczba po lewej stronie pivot jest większa od pivot, a liczba po prawej stronie mniejsza od pivot, 
+zamienia je miejscami. Tą akcje liczy licznik porównań (i). Po ustawieniu takich "podtablic" z mniejszymi i większymi liczbami, każdą z nich metoda sortuje w ten sam sposób.
+Należy tu dodać, że przy sortowaniu posortowanej tablicy licznik porównań nadal jest niezerowy.
+
+Komentarz: 
+Sortowanie bąbelkowe radzi sobie gorzej od sortowania kubelkowego. W przypadku tego pierwszego wymienionego liczba porównań jest stała, 
+natomiast w przypadku drugiego zakładajac najgorszy scenariusz otrzymamy liczbę porównań równą sortowaniu bąbelkowemu.
