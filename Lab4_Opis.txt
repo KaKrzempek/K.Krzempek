@@ -1,0 +1,34 @@
+Zadanie 2.:
+Program pobiera od użytkownika wpisany ciąg znaków, po czym za pomocą prubóje zmienić go na liczbę całkowitą (w bloku try_catch ).
+Jeśli został wychwycony wyjatek NumberFormatException, wypisuje błąd.
+
+Zadanie 3.:
+Program pobiera od użytkownika nr indeksu elementu tablicy, który ma zostać wyświetlony.
+Gdy użytkownik nie poda numeru, zosanie wychwycony wyjątek NumberFormatException (program korzysta tutaj z klasy ZmiennaNaDodatnia),
+gdy nr nie jest indeksem tablicy zostanie wychwycony wyjątek ArrayIndexOutOfBoundsException.
+Program został zapętlony tak, aby działał do czasu wpisania poprawnej liczby.
+
+Zadanie 4.: Modyfikacja Lab2
+->dodano klasę Osoba, ktora teraz przechowuje imie i nazwisko zarówno autorów w Zbiorze jak i odpowiednie dane Użytkownika.
+Użytkownik: Dodano obiekt uzytkownik, przez to : zmieniono metody getImie i getNazwisko. 
+Metoda DopiszDoKonta przyjmuje teraz obiekt Osoba (zamiast String'a) z informacją o autorze, ponieważ jest to bardziej kompatybilne z klasą Zbior.
+Metoda ZobaczHistorie pobiera imie i nazwisko uzytkownika poprzez metody get.
+Zbior: Dodano obiekt autor ( a także metody set i get do obsługi tego obiektu, w przypadku set istnieją 2 metody - jedna przyjmuje 2 ciągi znaków - imie i nazwisko, druga metoda przyjmuje obiekt z klasy Osoba)
+
+->dodano klasę AtrybutyAudio. Są w niej trzymane długosc, język i narracja zbioru - obiekty tej klasy wykorzystane są w klasach Film i Audiobook, 
+ponieważ, tak jak w przypadku klasy Osoba, bardziej czasochłonne jest tworzenie kilku takich samych zmiennych w każdej klasie osobno niż 
+delegacja obsługi takich zminnych do osobnej klasy i utworzenie później obiektu takiej klasy w innej klasie.
+AtrybutyAudio ma metody set i get oraz 2 konstruktory, pusty i wywołujący wszystkie metody set w nim zawarte, co było potrzebne klasom ją zawierającym.
+Oprócz tego w klasie Film utworzono przykładowe (dot. długości ) metody set i get zmieniające/wywołujące zmienne zawarte w obiekcie klasy AtrybutyAudio.
+
+->Ponadto:
+	-dodano konstruktory w klasie Zbior.
+	-Teraz w klasach dziedziczących po Zbiorze i Ksiazce wywoływane są konstruktory klas dziedziczonych 
+(za pomocą słowa kluczowego super), co znacznie ułatwiło edycję konstruktorów i dało lepszy pogląd na klasy.
+
+->Modyfikacje w ramach testów i te, których wpływu na zadanie nie zauważono:
+	-dokonano modyfikacji main() na potrzebę testów
+	-usunięto część konstruktorów w klasach: Muzyka (pusty i pobierający nazwe oraz autora), Film (pusty konstruktor).
+	-usunięto niepotrzebnne metody set/get z klasy Film
+	-usunieto numer i ID ze Zbioru, ponieważ id jest już nadane w ArrayList
+
