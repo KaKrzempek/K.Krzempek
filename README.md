@@ -1,7 +1,7 @@
 # K.Krzempek
 Java pwr
 
-Lab5:zawiera kilka prostych programów z testami jednostkowymi
+Lab5 zawiera: Kilka prostych programów z testami jednostkowymi
 
 Lab4: zawiera: Trzy programy: 2 z obsługą błedów (1. próba zmienienia ciągow znaków na int, 2. próba wywołania wyrazu z tablicy z niewłaściwym indeksem ). Trzeci program zawiera zmodyfikowany program z Lab_02 (tak, żeby "architektura" programu zawierała idee kompozycji)
 
