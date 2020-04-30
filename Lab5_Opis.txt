@@ -1,0 +1,30 @@
+Lab 5
+Program z testami jednostkowymi.
+Zawiera 2 klasy - w 1. są proste i krótkie metody, druga zawiera metody potrzebujące pobrać argumenty od Użytkownika (poprzez klawiaturę).
+
+Uwagi: 
+->W związku z brakiem wcześniejszych programów, nie można stwierdzić co zostało zmienione w kodzie w stosunku do 1. laboratorium.
+->Jeśli spojrzeć na same laboratorium 5. wszystkie metody opatrzono instrukcjami warunkowymi (if...else) 
+warunkującymi odpowiednie zachowanie w stosunku do specjalnych przypadków argumentów w metodach (np. podanie pustej tablicy)
+->Związku z przeprowadzaniem testów w 2. klasie program podzielono na małe metody wykonujących ściśle określone czynności.
+
+Metody, które były testowane:
+->klasa 1.
+1. Sprawdza czy któraś z temperatur jest mniejsza od 100 i jeśli tak, zwraca true, jeśli nie - false
+2. Szuka w tablicy liczb calkowitych ciągu cyfr 123, jeśli znajdzie zwraca true, jeśli nie - false
+3. Zwraca druga połowę znaków w Stringu, gdy ciąg jest nieparzysty, zwraca (połowę+1)
+4. Odwraca przesłaną w argumencie tablicę, tak, że 1 wyraz staje się ostatnim, jeśli podana tablica jest pusta zwraca null
+->klasa 2.
+5. Sprawdza, czy podane 3 liczby utworza trojkat prostokatny
+6. Rysuje trojkat z gwaiazdek tak wysoki, jak podano z klawiatury , zwraca prawde, jesli metoda zakończyla się pomyślnie
+Reszta: Związane z pobraniem liczby od użytkownika - tj. sprawdzenie czy to, co wpisał Użytkownik jest liczbą
+
+Testy: (wykonano przy pomocy klasy Assert - dokladniej assertTrue;assertFalse;assertEquals;assertNull)
+1. Sprawdzano, czy dane argumenty zwrócą odpowiednio true lub false
+2. Sprawdzono wynik, gdy ciąg liczb jest na końcu tablicy i "drogę", gdy nie każdy wyraz sekwencji występuje tablicy oraz gdy jest przesłana pusta i zbyt mała tablica
+3. Sprawdzono poprawną "drogę" oraz - czy funkcja zwróci w odpowiednich sytuacjach (połowę+1) ciągu i pusty ciąg (po wysłaniu pustego ciągu)
+4. Sprawdzono poprawną drogę i sytuację w ktorej wpisana zostaje pusta tablica ( program ma zwrócić null)
+
+5. Sprawdzono czy funkcja poprawnie identyfikuje trójkąt oraz czy rozróżnia trójkat prostokątny od nieprostokątnego
+6. Testowanie przeprowadzono za pomocą 2 zmiennych - w programie liczona jest liczba gwiadek która ma być i te które rzeczywiście zostały narysowane - jeśli obie liczby sa sobie równe metoda zwraca prawdę
+Reszta: Sprawdzenie czy funkcja poprawnie określa rodzaj podanego argumentu 
