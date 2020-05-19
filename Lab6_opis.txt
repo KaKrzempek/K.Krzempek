@@ -1,0 +1,17 @@
+Spring
+Podpunkty:
+1. Zmieniono endpointa, edytując ciąg znaków ("/greetings") na ("/bye")
+3. Dodano nową metodę w klasie CountService, która zmienia string na integer'a i użyto nowej zmiennej templateAge
+metodę zabezpieczono przed podaniem liter lub zbyt małej/ zbyt dużej liczby
+4. Tutaj dodano nową klasę Greetings2, zawierającą 2 string'i
+5. Dla tego problemu zrobiono dodatkową metodę, która sprawdza, czy ostatnia litera podanego ciągu znaków to "a" (jesli tak, identyfikuje imię jako żeńskie wyświetlając "Hello Madam!",
+w przypadku imienia męskiego zostanie wyświetlony komunikat "Hello Gentelman!", jeśli podany ciąg bedzie pusty wyświetli się "Hello Nobody!"
+metoda nie sprawdza, czy podany ciąg to prawdziwe imię
+6. Tutaj wzorcem jest ciąg liter "abcdefghijk" ( na stałe wpisany w funkcji w klasie CountService), jeśli zostanie wpisany ciag zawierający się we wzorcu, powinien wyświetlić sie komunikat "It's true", jeśli nie - "It's false"
+Metoda napisana dla tego zadania sprawdza dla każdej litery wzorca, czy pierwsza litera wpisanego ciągu jest rówan, jeśli tak, przyjmuje, że cały ciąg wpisany zawiera się we wzorcu i następnie sprawdza dla każdej litery wpianego ciągu czy kolejna litera wzorca mu odpowiada,
+ jeśli nie, powraca do 1. pętli i szuka od miejsca w którym skończył
+
+W programie podano przykładowe adresy, które powinny zadziałać.
+
+Mała uwaga: W opisie zastosowano wyrażenie "powinny", ponieważ pomimo kilku dni pacy z pluginami, ustawieniami komputera, wyszukiwarki i samym programem,
+ten nie potrafił się poprawnie uruchomi bez zwrócenia wyjątku. Dlatego też wszystkie klasy i metody zostały napisane (zmienione) "w ciemno" -bez otwarcia ich w przeglądarce, jednak w miarę możliwości sprawdzono je bez spring'a i wszystkie wykazywały, że działają poprawnie.
